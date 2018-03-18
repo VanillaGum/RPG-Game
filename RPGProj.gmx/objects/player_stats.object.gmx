@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hp = 15;
 dmg = 2;
-max_spd = 5;
+max_spd = 1;
 spd_gain = 0.5;
 </string>
           </argument>

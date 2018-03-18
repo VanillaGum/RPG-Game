@@ -4,6 +4,11 @@ dir_mov = scr_bindings();
 if (dir_mov != 0) {
     image_xscale = dir_mov;
     state = "move";
+    alarm[0] = 60*2;
+}else {
+    if (state != "idle") {
+        state = "rest";
+    }
 }
 ps = player_stats; //Init For player_stats(For Shortform easy reference)
 //Gaining Speed
