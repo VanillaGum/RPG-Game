@@ -6,7 +6,7 @@ if (dir_mov != 0) {
     state = "move";
     alarm[0] = 60*2;
 }else {
-    if (state != "idle") {
+    if (state == "move") {
         state = "rest";
     }
 }
