@@ -74,7 +74,9 @@ state = "idle";
           <argument>
             <kind>1</kind>
             <string>///Movement
-scr_move();
+if (state != "attack") {
+    scr_move();
+}
 </string>
           </argument>
         </arguments>
@@ -131,6 +133,13 @@ if (keyboard_check(ord('X'))) {
         image_index = 0;
         sprite_index = spr_player_attack;
         state = "attack";
+    }
+}
+if (image_index == 7 &amp;&amp; sprite_index == spr_player_attack) {
+    if(image_xscale == 1) {
+        instance_create(x+12,y-20,obj_hitbox);
+    }else {
+        instance_create(x-31,y-20,obj_hitbox);
     }
 }
 </string>
