@@ -15,13 +15,23 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\spr_npc</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Player">
+      <scripts name="Player Movement">
+        <script>scripts\scr_input.gml</script>
+        <script>scripts\scr_move.gml</script>
+      </scripts>
+    </scripts>
     <script>scripts\scr_bindings.gml</script>
-    <script>scripts\scr_move.gml</script>
+    <script>scripts\scr_move_2.gml</script>
     <script>scripts\scr_1hit_atk.gml</script>
+    <script>scripts\scr_enemy.gml</script>
+    <script>scripts\scr_damaged.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -29,6 +39,10 @@
     <object>objects\obj_keybindings</object>
     <object>objects\obj_solid</object>
     <object>objects\obj_hitbox</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\object6</object>
+    <object>objects\par_solid</object>
+    <object>objects\obj_npc</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

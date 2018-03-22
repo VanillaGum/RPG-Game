@@ -1,23 +1,41 @@
-///scr_move
-//Movement Code For Player
-dir_mov = scr_bindings();
-if (dir_mov != 0) {
-    image_xscale = dir_mov;
-    state = "move";
-    alarm[0] = 60*2;
-}else {
-    if (state == "move") {
-        state = "rest";
+scr_input();
+
+//React to inputs
+move = key_left + key_right;
+hsp = move * movespeed;
+if (vsp < 10) vsp += grav;
+
+if (place_meeting(x,y+1,par_solid))
+{
+    vsp = key_jump * -jumpspeed;
+}
+
+//Horizontal Collision
+if (place_meeting(x+hsp,y,par_solid))
+{
+    while(!place_meeting(x+sign(hsp),y,par_solid))
+    {
+        x += sign(hsp);
     }
+    hsp = 0;
 }
-ps = player_stats; //Init For player_stats(For Shortform easy reference)
-//Gaining Speed
-if (spd < ps.max_spd) {
-    spd += ps.spd_gain
+x += hsp;
+
+//Vertical Collision
+if (place_meeting(x,y+vsp,par_solid))
+{
+    while(!place_meeting(x,y+sign(vsp),par_solid))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
 }
-//Check if moving through a wall
-if (!collision_line(x,y,x+(spd*dir_mov),y+(spd*dir_mov),obj_solid,false,true)) {
-    x += spd*dir_mov;
-}else {
-//x+spd goes through or collides into wall
+y += vsp;
+
+//Change Sprite Direction
+if (-key_left) {
+    image_xscale = -1;
+}
+if (key_right) {
+    image_xscale = 1;
 }

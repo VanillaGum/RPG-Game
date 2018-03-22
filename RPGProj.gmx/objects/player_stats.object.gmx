@@ -25,10 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 15;
+            <string>///Init Player Stats
+//Basic Stats
+lv = 1;
+hp = 15;
+mana = 0;
+xp = 0;
+//Damaged And Movement
 dmg = 2;
 max_spd = 1;
 spd_gain = 0.5;
+//Xp Stats
+xptolevel = 15;
+multiplier = 0.5;
+
 </string>
           </argument>
         </arguments>

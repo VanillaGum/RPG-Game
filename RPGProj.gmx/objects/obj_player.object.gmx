@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd = 0;
+            <string>//Movement Variables
+grav = 0.5;
+hsp = 0;
+vsp = 0;
+jumpspeed = 7;
+movespeed = 2;
+
 image_speed = 0.2;
 state = "idle";
 </string>
