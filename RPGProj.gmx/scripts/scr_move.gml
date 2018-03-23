@@ -2,6 +2,12 @@ scr_input();
 
 //React to inputs
 move = key_left + key_right;
+if (move != 0) {
+    state = "move";
+} else if (state = "move") {
+    state = "idle";
+}
+
 hsp = move * movespeed;
 if (vsp < 10) vsp += grav;
 
