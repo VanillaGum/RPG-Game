@@ -17,6 +17,12 @@
     <sprite>sprites\sprite7</sprite>
     <sprite>sprites\sprite9</sprite>
     <sprite>sprites\spr_npc</sprite>
+    <sprites name="Quest Indicator">
+      <sprite>sprites\spr_qi_box</sprite>
+      <sprite>sprites\spr_qi_completed</sprite>
+      <sprite>sprites\spr_qi_inprogress</sprite>
+      <sprite>sprites\spr_qi_new</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +38,11 @@
     <script>scripts\scr_1hit_atk.gml</script>
     <script>scripts\scr_enemy.gml</script>
     <script>scripts\scr_damaged.gml</script>
+    <script>scripts\scr_reward_decode.gml</script>
+    <script>scripts\string_split.gml</script>
+    <script>scripts\scr_add_rewards.gml</script>
+    <script>scripts\scr_add_item_inventory.gml</script>
+    <script>scripts\scr_move_item.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -43,6 +54,9 @@
     <object>objects\object6</object>
     <object>objects\par_solid</object>
     <object>objects\obj_npc</object>
+    <object>objects\obj_quest</object>
+    <object>objects\obj_player_inventory</object>
+    <object>objects\obj_items</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
