@@ -1,9 +1,8 @@
 ///scr_add_rewards
 //Adds Rewards Based On Quest Id
 var quest_id = argument0;
-var grid = obj_quest.quest_grid;
-var grid_y = ds_grid_value_y(grid, 0, 0, 0, ds_grid_height(grid), quest_id) // Get Y value based on QuestID
-var reward_string = ds_grid_get(grid, 7, grid_y);
+var grid_y = ds_grid_value_y(obj_quest.quest_grid, 0, 0, 0, ds_grid_height(obj_quest.quest_grid), quest_id) // Get Y value based on QuestID
+var reward_string = ds_grid_get(obj_quest.quest_grid, 7, grid_y);
 var reward_queue = scr_reward_decode(reward_string);
 
 var i;
