@@ -43,6 +43,8 @@
     <script>scripts\scr_add_rewards.gml</script>
     <script>scripts\scr_add_item_inventory.gml</script>
     <script>scripts\scr_move_item.gml</script>
+    <script>scripts\scr_get_quest_y.gml</script>
+    <script>scripts\ds_grid_draw.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

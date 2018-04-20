@@ -28,22 +28,50 @@
             <string>///Initialise Grid
 
 quest_grid = ds_grid_create(10,1); 
+
 // Grid                                                                             
 // Quest Id | Quest Name | Journal Description | Dialog Id | NPC Giver | NPC Collector | Requirements Id | Task ID | Reward | Status
 // Number   | String     | String              | Number    | String    | String        | Number          | Number  | String | Locked(0), Open(1), InProgress(2), Completed(3), Collected(4) 
 //Requirements Id = Requirements In Order To Accept Quest
 //Task Id = What the Quest Requires, Be It Kill 10 monsters
 //Test Quest
-ds_grid_set(quest_grid, 0, 0, 0);
-ds_grid_set(quest_grid, 1, 0, "Monster Hunter"); //Incomplete system
-ds_grid_set(quest_grid, 2, 0, "John the butcher needs some fresh monster meat to sell."); //Incomplete system
-ds_grid_set(quest_grid, 3, 0, 0); //Incomplete system
-ds_grid_set(quest_grid, 4, 0, "John"); //Incomplete system
-ds_grid_set(quest_grid, 5, 0, "John"); //Incomplete system
-ds_grid_set(quest_grid, 6, 0, 0); //Incomplete system
-ds_grid_set(quest_grid, 7, 0, 0); //Incomplete system
-ds_grid_set(quest_grid, 8, 0, "0x1,1x1"); //In Progress
-ds_grid_set(quest_grid, 9, 0, 1); //Incomplete system
+ds_grid_add(quest_grid, 0, 0, 0);
+ds_grid_add(quest_grid, 1, 0, "Monster Hunter"); //Incomplete system
+ds_grid_add(quest_grid, 2, 0, "John the butcher needs some fresh monster meat to sell."); //Incomplete system
+ds_grid_add(quest_grid, 3, 0, 0); //Incomplete system
+ds_grid_add(quest_grid, 4, 0, "John"); //Incomplete system
+ds_grid_add(quest_grid, 5, 0, "John"); //Incomplete system
+ds_grid_add(quest_grid, 6, 0, 0); //Incomplete system
+ds_grid_add(quest_grid, 7, 0, 0); //Incomplete system
+ds_grid_add(quest_grid, 8, 0, "0x1,1x1"); //In Progress
+ds_grid_add(quest_grid, 9, 0, 1); //Incomplete system
+
+ds_grid_add(quest_grid, 0, 1, 1);
+ds_grid_add(quest_grid, 1, 1, "Monster Hunter"); //Incomplete system
+ds_grid_add(quest_grid, 2, 1, "John the butcher needs some fresh monster meat to sell."); //Incomplete system
+ds_grid_add(quest_grid, 3, 1, 0); //Incomplete system
+ds_grid_add(quest_grid, 4, 1, "John"); //Incomplete system
+ds_grid_add(quest_grid, 5, 1, "John"); //Incomplete system
+ds_grid_add(quest_grid, 6, 1, 0); //Incomplete system
+ds_grid_add(quest_grid, 7, 1, 0); //Incomplete system
+ds_grid_add(quest_grid, 8, 1, "0x1,1x1"); //In Progress
+ds_grid_add(quest_grid, 9, 1, 1); //Incomplete system
+
+ds_grid_add(quest_grid, 0, 2, 2);
+ds_grid_add(quest_grid, 1, 2, "Monster Hunter"); //Incomplete system
+ds_grid_add(quest_grid, 2, 2, "John the butcher needs some fresh monster meat to sell."); //Incomplete system
+ds_grid_add(quest_grid, 3, 2, 0); //Incomplete system
+ds_grid_add(quest_grid, 4, 2, "John"); //Incomplete system
+ds_grid_add(quest_grid, 5, 2, "John"); //Incomplete system
+ds_grid_add(quest_grid, 6, 2, 0); //Incomplete system
+ds_grid_add(quest_grid, 7, 2, 0); //Incomplete system
+ds_grid_add(quest_grid, 8, 2, "0x1,1x1"); //In Progress
+ds_grid_add(quest_grid, 9, 2, 1); //Incomplete system
+
+show_message(string(ds_grid_height(quest_grid)));
+show_message(string(ds_grid_width(quest_grid)));
+
+ds_grid_draw(quest_grid,0,0);
 </string>
           </argument>
         </arguments>

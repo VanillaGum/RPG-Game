@@ -125,7 +125,7 @@ window_set_cursor(cr_drag);
           <argument>
             <kind>1</kind>
             <string>draw_dialog = true;
-scr_add_rewards(0);
+scr_add_rewards(2);
 </string>
           </argument>
         </arguments>
