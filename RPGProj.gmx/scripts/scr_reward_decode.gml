@@ -1,8 +1,7 @@
 ///scr_rewards_decode
 //Decodes reward string from obj_quest's ds_grid
 //Returns array with item id and quantity
-encoded_string = argument0; //Gets Encoded String
-
+var encoded_string = argument0; //Gets Encoded String
 //Split By Comma(",") First
 var split = string_split(encoded_string , ","); 
 //Split By Multiplier Next(Amt Of The Item)
@@ -17,4 +16,5 @@ for(i=0; i < length; i++) {
     ds_queue_enqueue(rtnSplit, split2[0]); // Add Item Id To Queue
     ds_queue_enqueue(rtnSplit, split2[1]); // Add Item Quantity To Queue
 }
-return rtnSplit;
+ds_queue_copy(obj_npc.reward_queue, rtnSplit);
+ds_queue_destroy(rtnSplit);

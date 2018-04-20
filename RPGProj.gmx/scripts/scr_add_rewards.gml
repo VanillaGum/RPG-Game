@@ -3,8 +3,9 @@
 var quest_id = argument0;
 //var grid_y = ds_grid_value_y(obj_quest.quest_grid, 0, 0, 0, ds_grid_height(obj_quest.quest_grid), quest_id) // Get Y value based on QuestID
 var grid_y = scr_get_quest_y(quest_id);
-var reward_string = ds_grid_get(obj_quest.quest_grid, 7, grid_y);
-var reward_queue = scr_reward_decode(reward_string);
+var reward_string = ds_grid_get(obj_quest.quest_grid, 8, grid_y);
+reward_queue = ds_queue_create();
+scr_reward_decode(reward_string,);
 
 var i;
 var no = 0;
@@ -16,8 +17,9 @@ for (i=0; i < ds_queue_size(reward_queue); i++) {
         no++;
     }else {
         var quantity = ds_queue_dequeue(reward_queue);
-        scr_add_item_inventory(itemId, quanttiy);
+        scr_add_item_inventory(itemId, quantity);
         no = 0;
     }
 }
+ds_queue_destroy(reward_queue);
 

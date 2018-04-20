@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Initialise Grid
 
-quest_grid = ds_grid_create(10,1); 
+quest_grid = ds_grid_create(10,3); 
 
 // Grid                                                                             
 // Quest Id | Quest Name | Journal Description | Dialog Id | NPC Giver | NPC Collector | Requirements Id | Task ID | Reward | Status
@@ -67,34 +67,6 @@ ds_grid_add(quest_grid, 6, 2, 0); //Incomplete system
 ds_grid_add(quest_grid, 7, 2, 0); //Incomplete system
 ds_grid_add(quest_grid, 8, 2, "0x1,1x1"); //In Progress
 ds_grid_add(quest_grid, 9, 2, 1); //Incomplete system
-
-show_message(string(ds_grid_height(quest_grid)));
-show_message(string(ds_grid_width(quest_grid)));
-
-ds_grid_draw(quest_grid,0,0);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Fill Grid With Quest
-
-
 </string>
           </argument>
         </arguments>
