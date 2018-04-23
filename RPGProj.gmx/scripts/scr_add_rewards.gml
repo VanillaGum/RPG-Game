@@ -5,7 +5,7 @@ var quest_id = argument0;
 var grid_y = scr_get_quest_y(quest_id);
 var reward_string = ds_grid_get(obj_quest.quest_grid, 8, grid_y);
 reward_queue = ds_queue_create();
-scr_reward_decode(reward_string,);
+scr_reward_decode(reward_string, self.id);
 
 var i;
 var no = 0;
