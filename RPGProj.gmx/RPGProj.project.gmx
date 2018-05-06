@@ -55,7 +55,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\object6</object>
     <object>objects\par_solid</object>
-    <object>objects\obj_npc</object>
+    <object>objects\w</object>
     <object>objects\obj_quest</object>
     <object>objects\obj_player_inventory</object>
     <object>objects\obj_items</object>
