@@ -152,6 +152,7 @@ scr_add_rewards(2);
 
 if (draw_dialog == true) {
     draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+50,view_yview[0]+50,false);
+    
 }
 </string>
           </argument>

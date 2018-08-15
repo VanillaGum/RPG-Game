@@ -2,7 +2,7 @@
 //Adds Items To Inventory
 var itemId = argument0;
 var quantity = argument1;
-//Find If Item Exist
+//Find If Item Exist In Invetory Already
 
 //Check If Item Quantity Exceeds
 
@@ -25,8 +25,9 @@ ds_grid_get(obj_items.item_grid,itemId,1)
 //Get Item Max Quantity
 ds_grid_get(obj_items.item_grid,itemId,3)
 //Add Item Id
-ds_grid_add(obj_player_inventory.item_inv, 1, empty_slot, real(itemId));
+ds_grid_set(obj_player_inventory.item_inv, 1, empty_slot, real(itemId));
 //Add Item Quantity
-ds_grid_add(obj_player_inventory.item_inv, 2, empty_slot, real(quantity));
+show_message(quantity)
+ds_grid_set(obj_player_inventory.item_inv, 2, empty_slot, real(quantity));
 
 

@@ -37,6 +37,8 @@ ds_grid_set_region(item_inv,0,0,4, size, -1);
 //1 = id
 //2 = quantity
 //3 = max_quantity
+inv_font = font_add("kenvector_future_thin.ttf",8,false,false,32,128)
+draw_inv = false;
 </string>
           </argument>
         </arguments>
@@ -60,9 +62,40 @@ ds_grid_set_region(item_inv,0,0,4, size, -1);
           <argument>
             <kind>1</kind>
             <string>var i =0;
-for (i=0;i &lt; size; i++) {
-    show_message(ds_grid_get(item_inv,0,i));
+/*for (i=0;i &lt; size; i++) {
+    show_message("Item Id: " + string(ds_grid_get(item_inv,1,i)) + "|" + "Quantity" + string(ds_grid_get(item_inv,2,i)));
+}*/
+draw_inv = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_set_font(inv_font);
+
+depth = -15;
+if(draw_inv == true) {
+    draw_sprite(sprite16,0,view_xview[0]+125,view_yview[0]+125)
 }
+
 </string>
           </argument>
         </arguments>
