@@ -25,7 +25,10 @@ if (place_meeting(x+hsp,y,par_solid))
     }
     hsp = 0;
 }
+if (hsp > 0 || hsp < 0) {
+stepsToDeath -= 1;
 x += hsp;
+}
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,par_solid))

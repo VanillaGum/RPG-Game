@@ -7,10 +7,9 @@ var reward_string = ds_grid_get(obj_quest.quest_grid, 8, grid_y);
 reward_queue = ds_queue_create();
 scr_reward_decode(reward_string, self.id);
 
-var i;
 var no = 0;
 var itemId = -1;
-for (i=0; i < ds_queue_size(reward_queue); i++) {
+while( !(ds_queue_empty(reward_queue)) ) {
     if (no == 0) {
         //Item Id Is At Head Of Queue
         itemId = ds_queue_dequeue(reward_queue);

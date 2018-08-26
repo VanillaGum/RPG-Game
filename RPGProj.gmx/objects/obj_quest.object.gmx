@@ -65,7 +65,7 @@ ds_grid_add(quest_grid, 4, 2, 0); //Incomplete system
 ds_grid_add(quest_grid, 5, 2, 0); //Incomplete system
 ds_grid_add(quest_grid, 6, 2, 0); //Incomplete system
 ds_grid_add(quest_grid, 7, 2, 0); //Incomplete system
-ds_grid_add(quest_grid, 8, 2, "0x1,1x1"); //In Progress
+ds_grid_add(quest_grid, 8, 2, "0x2,1x2"); //In Progress
 ds_grid_add(quest_grid, 9, 2, 1); //Incomplete system
 </string>
           </argument>

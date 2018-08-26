@@ -59,8 +59,10 @@
       <sprite>sprites\spr_qi_inprogress</sprite>
       <sprite>sprites\spr_qi_new</sprite>
     </sprites>
-    <sprite>sprites\sprite16</sprite>
+    <sprite>sprites\spr_inventory</sprite>
     <sprite>sprites\sprite17</sprite>
+    <sprite>sprites\spr_item_1</sprite>
+    <sprite>sprites\spr_item_2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -69,19 +71,27 @@
       <scripts name="Player Movement">
         <script>scripts\scr_input.gml</script>
         <script>scripts\scr_move.gml</script>
+        <script>scripts\scr_bindings.gml</script>
+      </scripts>
+      <scripts name="Inventory">
+        <script>scripts\scr_add_item_inventory.gml</script>
+        <script>scripts\scr_inv_move_item.gml</script>
+        <script>scripts\scr_get_item_sprite.gml</script>
+        <script>scripts\scr_inv_find_empty_slot.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\scr_bindings.gml</script>
+    <scripts name="Quest">
+      <scripts name="Adding Rewards">
+        <script>scripts\scr_reward_decode.gml</script>
+        <script>scripts\scr_get_quest_y.gml</script>
+        <script>scripts\scr_add_rewards.gml</script>
+        <script>scripts\string_split.gml</script>
+      </scripts>
+    </scripts>
     <script>scripts\scr_move_2.gml</script>
-    <script>scripts\scr_1hit_atk.gml</script>
     <script>scripts\scr_enemy.gml</script>
+    <script>scripts\scr_1hit_atk.gml</script>
     <script>scripts\scr_damaged.gml</script>
-    <script>scripts\scr_reward_decode.gml</script>
-    <script>scripts\string_split.gml</script>
-    <script>scripts\scr_add_rewards.gml</script>
-    <script>scripts\scr_add_item_inventory.gml</script>
-    <script>scripts\scr_move_item.gml</script>
-    <script>scripts\scr_get_quest_y.gml</script>
     <script>scripts\ds_grid_draw.gml</script>
     <script>scripts\scr_enemy_movement.gml</script>
     <script>scripts\scr_enemy_movement_create.gml</script>
